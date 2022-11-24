@@ -10,7 +10,9 @@ ssl._create_default_https_context = ssl._create_unverified_context
 import graphrox as gx
 import networkx as nx
 
-from karateclub import FeatherGraph
+from karateclub import FeatherGraph, IGE, LDP, GL2Vec, Graph2Vec, NetLSD, SF, FGSD
+from karateclub import WaveletCharacteristic as WvChr, GeoScattering as GS
+
 from karateclub.dataset import GraphSetReader
 
 
@@ -59,6 +61,16 @@ def approximate_gx_graphs(gx_graphs, block_dimension, threshold):
     return [g.duplicate().approximate(block_dimension, threshold) for g in gx_graphs]
 
 
+def get_embeddings(graphs, approx_graphs, model):
+    model.fit(graphs)
+    embeddings = model.get_embedding()
+
+    model.fit(approx_graphs)
+    approx_embeddings = model.get_embedding()
+
+    return (embeddings, approx_embeddings)
+
+
 if __name__ == '__main__':
     nx_graphs, gx_graphs = obtain_graphset()
     gx_approx_graphs = approximate_gx_graphs(gx_graphs, 2, 0.25)
@@ -68,17 +80,17 @@ if __name__ == '__main__':
     for graph in gx_approx_graphs:
         nx_approx_graphs.append(graphrox_to_networkx(graph))
 
-    model = FeatherGraph()
-    model.fit(nx_graphs)
-    embeddings = model.get_embedding()
+    fthr_emb, fthr_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, FeatherGraph())
+    ldb_emb, ldb_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, LDP())
+    wc_emb, wc_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, WvChr())
+    gs_emb, gs_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, GS())
+    gl2v_emb, gl2v_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, GL2Vec())
+    g2vec_emb, g2vec_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, Graph2Vec())
+    nlsd_emb, nlsd_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, NetLSD())
+    sf_emb, sf_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, SF())
+    fgsd_emb, fgsd_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, FGSD())
+    
+    ige_emb, ige_approx_emb = get_embeddings(nx_graphs[:249], nx_approx_graphs[:249], IGE())
 
-    model = FeatherGraph()
-    model.fit(nx_approx_graphs)
-    approx_embeddings = model.get_embedding()
-
-    print(embeddings)
-    print()
-    print()
-    print(approx_embeddings)
 
     # TODO: Synthetic datasets with larger graphs
