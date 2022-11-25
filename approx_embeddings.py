@@ -9,11 +9,28 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 import graphrox as gx
 import networkx as nx
+import os
+
+from multiprocessing import Manager, Process, Queue
 
 from karateclub import FeatherGraph, IGE, LDP, GL2Vec, Graph2Vec, NetLSD, SF, FGSD
 from karateclub import WaveletCharacteristic as WvChr, GeoScattering as GS
 
 from karateclub.dataset import GraphSetReader
+
+
+def process_embeddings(work_queue, embeddings, graphs, approx_graphs):
+    while not work_queue.empty():
+        job = work_queue.get()
+        
+        emb, approx_emb = get_embeddings(graphs, approx_graphs, job['model'])
+        embeddings.append({
+            'name': job['name'],
+            'standard': emb,
+            'approximate': approx_emb,
+        })
+
+        print('Generated ' + job['name'] + ' embedding')
 
 
 def networkx_to_graphrox(nx_graph):
@@ -72,7 +89,10 @@ def get_embeddings(graphs, approx_graphs, model):
 
 
 if __name__ == '__main__':
+    print('Obtaining graphs...')
     nx_graphs, gx_graphs = obtain_graphset()
+
+    print('Approximating graphs...')
     gx_approx_graphs = approximate_gx_graphs(gx_graphs, 2, 0.25)
 
     nx_approx_graphs = []
@@ -80,17 +100,37 @@ if __name__ == '__main__':
     for graph in gx_approx_graphs:
         nx_approx_graphs.append(graphrox_to_networkx(graph))
 
-    fthr_emb, fthr_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, FeatherGraph())
-    ldb_emb, ldb_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, LDP())
-    wc_emb, wc_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, WvChr())
-    gs_emb, gs_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, GS())
-    gl2v_emb, gl2v_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, GL2Vec())
-    g2vec_emb, g2vec_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, Graph2Vec())
-    nlsd_emb, nlsd_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, NetLSD())
-    sf_emb, sf_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, SF())
-    fgsd_emb, fgsd_approx_emb = get_embeddings(nx_graphs, nx_approx_graphs, FGSD())
-    
-    ige_emb, ige_approx_emb = get_embeddings(nx_graphs[:249], nx_approx_graphs[:249], IGE())
+    work_queue = Queue()
+    manager = Manager()
+    embeddings = manager.list()
 
+    work_queue.put({'name': 'FeatherGraph', 'model': FeatherGraph()})
+    work_queue.put({'name': 'LDP', 'model': LDP()})
+    work_queue.put({'name': 'WaveletCharacteristic', 'model': WvChr()})
+    work_queue.put({'name': 'GeoScattering', 'model': GS()})
+    work_queue.put({'name': 'GL2Vec', 'model': GL2Vec()})
+    work_queue.put({'name': 'Graph2Vec', 'model': Graph2Vec()})
+    work_queue.put({'name': 'NetLSD', 'model': NetLSD()})
+    work_queue.put({'name': 'SF', 'model': SF()})
+    work_queue.put({'name': 'FGSD', 'model': FGSD()})
 
-    # TODO: Synthetic datasets with larger graphs
+    print('Generating embeddings...')
+    print()
+
+    processes = []
+
+    for i in range(os.cpu_count()):
+        process = Process(target=process_embeddings, args=(work_queue,
+                                                           embeddings,
+                                                           nx_graphs,
+                                                           nx_approx_graphs))
+        process.start()
+        processes.append(process)
+
+    for process in processes:
+        process.join()
+
+    print()
+    print(len(embeddings))
+
+    # TODO: Create synthetic datasets with larger graphs
