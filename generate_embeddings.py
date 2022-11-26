@@ -75,7 +75,7 @@ def graphrox_to_networkx(gx_graph):
     return nx_graph
 
 
-def process_embeddings(params, tasks_completed):
+def process_embeddings(params, tasks_completed, emb_queue_size):
     print('Processing embeddings for task ' + str(params['id']) + '...')
 
     graphs = params['graphs']
@@ -133,7 +133,7 @@ def process_embeddings(params, tasks_completed):
     print(f'Completed task {task_id}. {completed}/{tasks_total} complete')
 
 
-def prepare_graphs(params, emb_queue):
+def prepare_graphs(params, emb_queue, emb_queue_size):
     print('Preparing for task ' + str(params['id']) + '...')
 
     nx_graphs = generate_barabasi_albert_graphset(params['n'], params['m'], params['count'])
@@ -157,17 +157,25 @@ def prepare_graphs(params, emb_queue):
     params['approx_graphs'] = nx_approx_graphs
     emb_queue.put(params)
 
+    with emb_queue_size.get_lock():
+        emb_queue_size.value += 1
 
-def dispatch_worker(prep_queue, emb_queue, tasks_completed):
+
+def dispatch_worker(prep_queue, emb_queue, tasks_completed, emb_queue_size):
     while True:
         if not emb_queue.empty():
             task = emb_queue.get()
-            process_embeddings(task, tasks_completed)
-        elif not prep_queue.empty():
+
+            with emb_queue_size.get_lock():
+                emb_queue_size.value -= 1
+            
+            process_embeddings(task, tasks_completed, emb_queue_size)
+        elif not prep_queue.empty() and emb_queue_size.value < os.cpu_count() / 4:
             task = prep_queue.get()
-            prepare_graphs(task, emb_queue)
+
+            prepare_graphs(task, emb_queue, emb_queue_size)
         else:
-            time.sleep(0.25)
+            time.sleep(0.5)
     
 
 if __name__ == '__main__':
@@ -201,6 +209,7 @@ if __name__ == '__main__':
     emb_queue = Queue()
 
     tasks_completed = Value('i', 0)
+    emb_queue_size = Value('i', 0)
 
     for i, task in enumerate(conf['tasks']):
         task_id = i + 1
@@ -231,7 +240,10 @@ if __name__ == '__main__':
 
         prep_queue.put(task)
 
-    worker_pool = Pool(os.cpu_count(), dispatch_worker, (prep_queue, emb_queue, tasks_completed,))
+    worker_pool = Pool(os.cpu_count(), dispatch_worker, (prep_queue,
+                                                         emb_queue,
+                                                         tasks_completed,
+                                                         emb_queue_size,))
 
     while True:
         if tasks_completed.value == len(tasks):
