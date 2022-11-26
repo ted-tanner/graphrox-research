@@ -1,12 +1,3 @@
-# This is only needed if you get an SSL error. This is not a great
-# thing to do as it disables SSL verification entirely and it's not a
-# good idea to download things without verifying the authenticity of
-# the source.
-######################################################################
-# import ssl
-# ssl._create_default_https_context = ssl._create_unverified_context
-######################################################################
-
 import json
 import os
 import sys
