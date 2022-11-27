@@ -1,3 +1,5 @@
 *.pyc
-*.pkl
 emb_config.json
+
+*.pkl
+!data/**/*.pkl
