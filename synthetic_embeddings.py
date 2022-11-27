@@ -10,7 +10,6 @@ import pickle as pkl
 from multiprocessing import Manager, Pool, Queue, Value
 
 from karateclub import FeatherGraph, LDP, Graph2Vec
-from karateclub.dataset import GraphSetReader
 
 
 def get_embeddings(graphs, approx_graphs, model):
