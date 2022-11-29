@@ -388,6 +388,393 @@
             "count": 250
         },
         {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 5,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 16,
+            "count": 250
+        }
+        ,
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 10,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 16,
+            "count": 250
+        }
+        ,
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 15,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 16,
+            "count": 250
+        }
+        ,
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 2,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 4,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 8,
+            "count": 250
+        },
+        {
+            "n": 1000,
+            "m": 20,
+            "compression_level": 16,
+            "count": 250
+        },
+        {
             "n": 2000,
             "m": 5,
             "compression_level": 2,
