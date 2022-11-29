@@ -79,8 +79,8 @@ if __name__ == '__main__':
         compressed_graphs = []
         
         for graph in gx_graphs:
-            gx_compressed_graph = graph.compress(compression_level)
-            compressed_graphs.append(se.graphrox_to_networkx(gx_compressed_graph))
+            gx_decompressed_graph = graph.compress(compression_level).decompress()
+            compressed_graphs.append(se.graphrox_to_networkx(gx_decompressed_graph))
             
         embeddings = []
 
