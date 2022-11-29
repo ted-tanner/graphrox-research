@@ -12,7 +12,7 @@ from multiprocessing import Manager, Pool, Queue, Value
 from karateclub import FeatherGraph, LDP, Graph2Vec
 
 
-def get_embeddings(graphs, approx_graphs, model):
+def get_embeddings(graphs, model):
     model.fit(graphs)
 
     before = time.perf_counter()
@@ -22,17 +22,8 @@ def get_embeddings(graphs, approx_graphs, model):
         'embeddings': embeddings
     }
 
-    model.fit(approx_graphs)
+    return embeddings
 
-    before = time.perf_counter()
-    approx_embeddings = model.get_embedding()
-    approx_embeddings = {
-        'execution_time': time.perf_counter() - before,
-        'embeddings': approx_embeddings,
-    }
-
-    return (embeddings, approx_embeddings)
-        
 
 def generate_barabasi_albert_graphset(n, m, count):
     """Generates a set of `count` Barabasi-Albert graphs with the given `n` and `m`"""
@@ -78,47 +69,42 @@ def process_embeddings(params, tasks_completed, emb_queue_size):
     print('Processing embeddings for task ' + str(params['id']) + '...')
 
     graphs = params['graphs']
-    approx_graphs = params['approx_graphs']
+    compressed_graphs = params['compressed_graphs']
 
     embeddings = []
-
-    emb, approx_emb = get_embeddings(params['graphs'], params['approx_graphs'], FeatherGraph())
+    
     embeddings.append({
         'name': 'FeatherGraph',
-        'standard': emb,
-        'approximate': approx_emb,
+        'standard': get_embeddings(params['graphs'], FeatherGraph()),
+        'compressed': get_embeddings(params['compressed_graphs'], FeatherGraph()),
     })
 
-    emb, approx_emb = get_embeddings(params['graphs'], params['approx_graphs'], LDP())
     embeddings.append({
         'name': 'LDP',
-        'standard': emb,
-        'approximate': approx_emb,
+        'standard': get_embeddings(params['graphs'], LDP()),
+        'compressed': get_embeddings(params['compressed_graphs'], LDP()),
     })
 
-    emb, approx_emb = get_embeddings(params['graphs'], params['approx_graphs'], Graph2Vec())
     embeddings.append({
         'name': 'Graph2Vec',
-        'standard': emb,
-        'approximate': approx_emb,
+        'standard': get_embeddings(params['graphs'], Graph2Vec()),
+        'compressed': get_embeddings(params['compressed_graphs'], Graph2Vec()),
     })
 
     count = params['count']
     n = params['n']
     m = params['m']
-    block_dimension = params['block_dimension']
-    threshold = params['threshold']
+    compression_level = params['compression_level']
 
     data = {
         'gen_n': n,
         'gen_m': m,
-        'approx_block_dimension': block_dimension,
-        'approx_threshold': threshold,
+        'compression_level': compression_level,
         'graph_count': count,
         'embeddings': embeddings,
     }
 
-    filename = f'out/emb_c({count})_n({n})_m({m})_b({block_dimension})_t({threshold}).pkl'
+    filename = f'out/emb_c({count})_n({n})_m({m})_cl({compression_level}).pkl'
     with open(filename, 'wb') as out_file:
         pkl.dump(data, out_file)
 
@@ -141,19 +127,20 @@ def prepare_graphs(params, emb_queue, emb_queue_size):
     for graph in nx_graphs:
         gx_graphs.append(networkx_to_graphrox(graph))
 
-    gx_approx_graphs = [
-        g.approximate(params['block_dimension'], params['threshold']) for g in gx_graphs
-    ]
+    gx_compressed_graphs = []
+    for graph in gx_graphs:
+        compressed_graph = graph.compress(params['compression_level'])
+        gx_compressed_graphs.append(compressed_graph.decompress())
 
-    nx_approx_graphs = []
+    nx_compressed_graphs = []
 
-    for graph in gx_approx_graphs:
-        nx_approx_graphs.append(graphrox_to_networkx(graph))
+    for graph in gx_compressed_graphs:
+        nx_compressed_graphs.append(graphrox_to_networkx(graph))
 
     print('Finished preparation for task ' + str(params['id']) + '.')
 
     params['graphs'] = nx_graphs
-    params['approx_graphs'] = nx_approx_graphs
+    params['compressed_graphs'] = nx_compressed_graphs
     emb_queue.put(params)
 
     with emb_queue_size.get_lock():
@@ -221,10 +208,7 @@ if __name__ == '__main__':
         if 'm' not in task:
             are_task_params_valid = False
 
-        if 'block_dimension' not in task:
-            are_task_params_valid = False
-
-        if 'threshold' not in task:
+        if 'compression_level' not in task:
             are_task_params_valid = False
 
         if 'count' not in task:

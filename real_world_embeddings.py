@@ -49,58 +49,69 @@ if __name__ == '__main__':
         nx_graphs.append(nx_graph)
         gx_graphs.append(gx_graph)
 
-    block_dimension_set = [2, 3, 4, 5]
-    threshold_set = [0.1, 0.2, 0.3, 0.4]
+    print('Generating embeddings for uncompressed graph...')
 
-    total_iterations = len(block_dimension_set) * len(threshold_set)
+    std_embeddings = []
+
+    std_embeddings.append({
+        'name': 'FeatherGraph',
+        'embeddings': se.get_embeddings(nx_graphs, FeatherGraph()),
+    })
+
+    std_embeddings.append({
+        'name': 'LDP',
+        'embeddings': se.get_embeddings(nx_graphs, LDP()),
+    })
+
+    std_embeddings.append({
+        'name': 'Graph2Vec',
+        'embeddings': se.get_embeddings(nx_graphs, Graph2Vec()),
+    })
+        
+    print('Compressing and decompressing graph, generating embeddings...')
+
+    compression_level_set = [2, 4, 8, 16, 32]
+
+    total_iterations = len(compression_level_set)
     current_iteration = 0
-
-    # These loops will repeatedly regenerate embeddings for nx_graphs. This can be sped up by
-    # eliminating this redundant work, but for now it is desireable to redo the calculation
-    # to account for variance in available compute capacity during the run
-    print('Approximating and generating embeddings...')
-    for block_dimension in block_dimension_set:
-        for threshold in threshold_set:
-            approx_graphs = []
+    
+    for compression_level in compression_level_set:
+        compressed_graphs = []
+        
+        for graph in gx_graphs:
+            gx_compressed_graph = graph.compress(compression_level)
+            compressed_graphs.append(se.graphrox_to_networkx(gx_compressed_graph))
             
-            for graph in gx_graphs:
-                gx_approx_graph = graph.approximate(block_dimension, threshold)
-                approx_graphs.append(se.graphrox_to_networkx(gx_approx_graph))
+        embeddings = []
 
-            embeddings = []
-
-            emb, approx_emb = se.get_embeddings(nx_graphs, approx_graphs, FeatherGraph())
-            embeddings.append({
-                'name': 'FeatherGraph',
-                'standard': emb,
-                'approximate': approx_emb,
-            })
-
-            emb, approx_emb = se.get_embeddings(nx_graphs, approx_graphs, LDP())
-            embeddings.append({
-                'name': 'LDP',
-                'standard': emb,
-                'approximate': approx_emb,
-            })
-
-            emb, approx_emb = se.get_embeddings(nx_graphs, approx_graphs, Graph2Vec())
-            embeddings.append({
-                'name': 'Graph2Vec',
-                'standard': emb,
-                'approximate': approx_emb,
-            })
-
-            data = {
-                'approx_block_dimension': block_dimension,
-                'approx_threshold': threshold,
-                'graph_count': len(nx_graphs),
-                'embeddings': embeddings,
-            }
-
-            filename = f'out/{dataset_name}_emb_c({len(nx_graphs)})_b({block_dimension})_t({threshold}).pkl'
-            with open(filename, 'wb') as out_file:
-                pkl.dump(data, out_file)
-
-            current_iteration += 1
-
-            print('Progress: {}%'.format(int((current_iteration / total_iterations) * 100)))
+        embeddings.append({
+            'name': 'FeatherGraph',
+            'embeddings': se.get_embeddings(compressed_graphs, FeatherGraph()),
+        })
+        
+        embeddings.append({
+            'name': 'LDP',
+            'embeddings': se.get_embeddings(compressed_graphs, LDP()),
+        })
+        
+        embeddings.append({
+            'name': 'Graph2Vec',
+            'embeddings': se.get_embeddings(compressed_graphs, Graph2Vec()),
+        })
+        
+        data = {
+            'compression_level': compression_level,
+            'graph_count': len(nx_graphs),
+            'standard_embeddings': {
+                ''
+            },
+            'compressed_embeddings': embeddings,
+        }
+        
+        filename = f'out/{dataset_name}_emb_c({len(nx_graphs)})_t({compression_level}).pkl'
+        with open(filename, 'wb') as out_file:
+            pkl.dump(data, out_file)
+            
+        current_iteration += 1
+            
+        print('Progress: {}%'.format(int((current_iteration / total_iterations) * 100)))

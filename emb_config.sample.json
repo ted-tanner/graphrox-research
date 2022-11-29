@@ -3,1354 +3,775 @@
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 200,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         }
         ,
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.1,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.1,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.1,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.1,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.2,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.2,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.2,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.2,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.3,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.3,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.3,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.3,
+            "compression_level": 16,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.4,
+            "compression_level": 2,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.4,
+            "compression_level": 4,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.4,
+            "compression_level": 8,
             "count": 250
         },
         {
             "n": 2000,
             "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.3,
-            "count": 250
-        }
-        ,
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 2,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 3,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 4,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 5,
-            "block_dimension": 5,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.3,
-            "count": 250
-        }
-        ,
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 2,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 3,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 4,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 10,
-            "block_dimension": 5,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.3,
-            "count": 250
-        }
-        ,
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 2,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 3,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 4,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 15,
-            "block_dimension": 5,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.1,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.2,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.3,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 2,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 3,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 4,
-            "threshold": 0.4,
-            "count": 250
-        },
-        {
-            "n": 4000,
-            "m": 20,
-            "block_dimension": 5,
-            "threshold": 0.4,
+            "compression_level": 16,
             "count": 250
         }
     ]
