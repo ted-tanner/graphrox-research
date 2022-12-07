@@ -53,20 +53,9 @@ if __name__ == '__main__':
 
     std_embeddings = []
 
-    std_embeddings.append({
-        'name': 'FeatherGraph',
-        'embeddings': se.get_embeddings(nx_graphs, FeatherGraph()),
-    })
-
-    std_embeddings.append({
-        'name': 'LDP',
-        'embeddings': se.get_embeddings(nx_graphs, LDP()),
-    })
-
-    std_embeddings.append({
-        'name': 'Graph2Vec',
-        'embeddings': se.get_embeddings(nx_graphs, Graph2Vec()),
-    })
+    std_embeddings.append(se.get_embeddings(nx_graphs, FeatherGraph()))
+    std_embeddings.append(se.get_embeddings(nx_graphs, LDP()))
+    std_embeddings.append(se.get_embeddings(nx_graphs, Graph2Vec()))
         
     print('Compressing and decompressing graph, generating embeddings...')
 
@@ -86,26 +75,26 @@ if __name__ == '__main__':
 
         embeddings.append({
             'name': 'FeatherGraph',
-            'embeddings': se.get_embeddings(compressed_graphs, FeatherGraph()),
+            'standard': std_embeddings[0],
+            'compressed': se.get_embeddings(compressed_graphs, FeatherGraph()),
         })
         
         embeddings.append({
             'name': 'LDP',
-            'embeddings': se.get_embeddings(compressed_graphs, LDP()),
+            'standard': std_embeddings[1],
+            'compressed': se.get_embeddings(compressed_graphs, LDP()),
         })
         
         embeddings.append({
             'name': 'Graph2Vec',
-            'embeddings': se.get_embeddings(compressed_graphs, Graph2Vec()),
+            'standard': std_embeddings[2],
+            'compressed': se.get_embeddings(compressed_graphs, Graph2Vec()),
         })
         
         data = {
             'compression_level': compression_level,
             'graph_count': len(nx_graphs),
-            'standard_embeddings': {
-                ''
-            },
-            'compressed_embeddings': embeddings,
+            'embeddings': embeddings,
         }
         
         filename = f'out/{dataset_name}_emb_c({len(nx_graphs)})_t({compression_level}).pkl'
